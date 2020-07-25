@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Weather Application</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="src/style.css" class="css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weather-container">
+        <div class="row">
+          <div class="col-6">
+            <h6>
+              <br />
+              Date will go here
+            </h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <form id="search-form">
+              <input
+                type="text"
+                placeholder="Search for a City"
+                autocomplete="off"
+                autofocus="on"
+                id="search-text-input"
+              />
+              <input type="submit" value="Search" />
+            </form>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-6">
+            <h1 id="current-city">
+              Waterloo
+            </h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <h2 id="current-temp">
+              <span id="mon-weather">🌤</span> <span id="mon-temp">17˚c</span>
+            </h2>
+          </div>
+          <div class="col-6">
+            Humidity: <span id="humidity">87</span>% <br />
+            Wind: <span id="wind">15 </span>km/h
+          </div>
+        </div>
+        <br />
+        <br />
+        <p>
+          <strong> How should I dress? </strong
+          ><span id="what-to-wear">Bring an umbrella and wear rain boots.</span>
+        </p>
+
+        <hr />
+        <br />
+        <h6>Forecast:</h6>
+        <br />
+        <div class="row">
+          <div class="col-2">
+            <h5>
+              🌦 17˚c
+            </h5>
+          </div>
+          <div class="col-2">
+            <h5>
+              🌧 17˚c
+            </h5>
+          </div>
+          <div class="col-2">
+            <h5>
+              🌤 17˚c
+            </h5>
+          </div>
+          <div class="col-2">
+            <h5>
+              🌦 17˚c
+            </h5>
+          </div>
+          <div class="col-2">
+            <h5>
+              ☀️ 17˚c
+            </h5>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-2">
+            Mon
+          </div>
+          <div class="col-2">
+            Tues
+          </div>
+          <div class="col-2">
+            Wed
+          </div>
+          <div class="col-2">
+            Thurs
+          </div>
+          <div class="col-2">
+            Fri
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="src/index.js"></script>
+  </body>
+</html>
