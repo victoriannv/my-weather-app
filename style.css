@@ -9,7 +9,7 @@
     );
   background-blend-mode: multiply;
   box-shadow: 6px 6px 35px -17px rgba(65, 65, 65, 0.4);
-  display: bock;
+  display: block;
   margin: 10% auto 0px;
   max-width: 600px;
   padding: 5%;
@@ -43,6 +43,16 @@ h5 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
   color: #ffffff;
+}
+
+h4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 8pt;
+
+  color: #1c1c1c;
 }
 
 h6 {
@@ -85,7 +95,7 @@ hr {
   font-weight: 300;
 }
 
-submit {
+#submit-button {
   color: #1c1c1c;
   background-color: #ffffff;
 }
