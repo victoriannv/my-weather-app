@@ -23,17 +23,9 @@
   <body>
     <div class="container">
       <div class="weather-container">
-        <div class="row">
-          <div class="col-6">
-            <h6>
-              <br />
-              Date will go here
-            </h6>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <form id="search-form">
+        
+         <div id="top-line">
+            <form class="align-left" id="search-form">
               <input
                 type="text"
                 placeholder="Search for a City"
@@ -43,42 +35,56 @@
               />
               <input type="submit" value="Search" id="submit-button" />
             </form>
-          </div>
-        </div>
+          
+         
+            <p class="align-right">
+            °C    °F
+            </p>
+    </div>
+        <br/>
+        <br/>
+        <h6>
+            Date will go here
+        </h6>
+        <br />
+        <br />
         <br />
         <div class="row">
-          <div class="col-6">
+          <div class="col-12">
             <h1 id="current-city">
               Waterloo
             </h1>
           </div>
         </div>
-
         <div class="row">
-          <div class="col-6">
+          <div class="col-12">
+            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png" id="illustration">
             <h2 id="current-temp">
-              <span id="mon-weather">🌤</span> <span id="mon-temp">17˚c</span>
+              <span id="mon-temp">17˚c</span>
             </h2>
           </div>
-          <div class="col-6">
-            <span id="humidity"
-              >Humidity: <span id="humidity-value">87</span> % </span
-            ><br />
-            <span id="wind">Wind: <span id="wind-value">15 </span>km/h </span>
-          </div>
         </div>
+       
         <br />
-        <br />
-        <p>
-          <strong> How should I dress? </strong
-          ><span id="what-to-wear">Bring an umbrella and wear rain boots.</span>
+        <br/>
+              <h3>
+            <span id="humidity"> Humidity: <span id="humidity-value">87</span>%
+            </span> </h3>
+              <h3>
+            <span id="wind">Wind: <span id="wind-value">15 </span>km/h </span>
+        </h3>
+     
+        <br/>
+        <p id="clothing">
+            <span id="bold"> How should I dress? </span><span id="what-to-wear">Bring an umbrella and wear rain boots.</span>
         </p>
 
+       
         <hr />
         <br />
-        <h6>Forecast:</h6>
+        <p id="forecast">FORECAST:</p>
         <br />
-        <div class="row">
+        <div class="row justify-content-md-center">
           <div class="col-2">
             <h5>
               🌦 17˚c
@@ -106,7 +112,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-md-center">
           <div class="col-2" id="date-names">
             MON
           </div>
@@ -123,8 +129,11 @@
             FRI
           </div>
         </div>
+    </br>
+        
       </div>
     </div>
+</br>  
     <h4>
       <a href="https://github.com/victoriannv/my-weather-app">
         Open source code

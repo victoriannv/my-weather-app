@@ -10,20 +10,23 @@
   background-blend-mode: multiply;
   box-shadow: 6px 6px 35px -17px rgba(65, 65, 65, 0.4);
   display: block;
-  margin: 10% auto 0px;
-  max-width: 600px;
-  padding: 5%;
+  margin: 5% auto 0px;
+  max-width: 550px;
+  padding: 3%;
 }
 
 h6 {
   font-size: 8pt;
   color: #e2e2e2;
+  text-align: right;
 }
 
 h1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 100;
+  font-size: 45pt;
   color: #ffffff;
+  text-align: center;
 }
 
 p {
@@ -37,28 +40,36 @@ h2 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 100;
   color: #ffffff;
+  text-align: center;
+  display: inline;
+  font-size: 24pt;
+}
+
+h3 {
+  line-height: 12pt;
 }
 
 h5 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
   color: #ffffff;
+  font-size: 18pt;
 }
 
 h4 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 0px;
   font-size: 8pt;
-
-  color: #1c1c1c;
+  color: #323232;
 }
 
 h6 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   color: #ffffff;
+  text-align: left;
 }
 
 #date-names {
@@ -70,12 +81,15 @@ h6 {
 
 hr {
   border-color: #ffffff;
+
+  border-width: 0.25px;
 }
 
 #humidity {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   color: #ffffff;
+  font-size: 10pt;
 }
 
 #humidity-value {
@@ -88,14 +102,63 @@ hr {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   color: #ffffff;
+  font-size: 10pt;
 }
 
 #search-form {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
+  font-size: 10pt;
 }
 
 #submit-button {
   color: #1c1c1c;
   background-color: #ffffff;
+}
+
+#clothing {
+  text-align: center;
+}
+
+#bold {
+  font-weight: 700;
+}
+
+#forecast {
+  color: #e2e2e2;
+  font-size: 8pt;
+  font-weight: 900;
+  text-align: center;
+}
+
+#temp-indicator {
+  color: #ffffff;
+  text-align: left;
+}
+
+#humidity {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+#wind {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+.align-left {
+  float: left;
+}
+.align-right {
+  float: right;
+}
+
+#illustration {
+  align-content: center;
+  display: inline-block;
+  margin: 0 auto;
 }

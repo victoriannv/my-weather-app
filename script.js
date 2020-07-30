@@ -1,3 +1,4 @@
+// Time
 let now = new Date();
 let minutes = now.getMinutes();
 let hours = now.getHours();
@@ -15,8 +16,17 @@ let day = days[now.getDay()];
 
 let h6 = document.querySelector("h6");
 
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+
+if (hours === 0) {
+  hours = 12;
+}
+
 h6.innerHTML = `${day}, ${hours}:${minutes}`;
 
+// API CONFIG
 let apiKey = "4e4f8b4141fbe846dcc547332e27ba7f";
 
 function showTemperature(response) {
@@ -40,16 +50,23 @@ function showTemperature(response) {
   // Humidity
 
   let humidityNumber = Math.round(response.data.main.humidity);
-  let humidityElement = document.querySelector("#humidity");
+  let humidityElement = document.querySelector("#humidity-value");
   humidityElement.innerHTML = humidityNumber;
   console.log(response.data.main.humidity);
 
   //Wind
   console.log(response.data.wind.speed);
   let windSpeed = Math.round(response.data.wind.speed);
-  let windElement = document.querySelector("#wind");
+  let windElement = document.querySelector("#wind-value");
   windElement.innerHTML = windSpeed;
   console.log(response.data.wind.speed);
+
+  //Icon
+  let illustrationElement = document.querySelector("#illustration");
+  illustrationElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function handleSubmit(event) {
