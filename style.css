@@ -70,6 +70,7 @@ h6 {
   font-weight: 300;
   color: #ffffff;
   text-align: left;
+  margin-top: -10px;
 }
 
 #date-names {
@@ -111,9 +112,19 @@ hr {
   font-size: 10pt;
 }
 
+#search-text-input {
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
 #submit-button {
   color: #1c1c1c;
   background-color: #ffffff;
+  border: none;
+  padding: 5px 15px;
+  margin-left: 10px;
+  border-radius: 4px;
 }
 
 #clothing {

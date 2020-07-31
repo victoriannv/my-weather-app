@@ -32,6 +32,10 @@ let apiKey = "4e4f8b4141fbe846dcc547332e27ba7f";
 function showTemperature(response) {
   console.log(response);
 
+  // Title
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.name;
+
   //Temperature
 
   let temperature = Math.round(response.data.main.temp);
@@ -69,16 +73,61 @@ function showTemperature(response) {
   );
 }
 
+function displayForecast(response) {
+  console.log(response.data.list[0]);
+  let forecast = document.querySelector("#forecast");
+  forecastElement.innerHTML = ` 
+        <div class="row weather-forecast" id="forecast">
+            <div class="col-2">
+                <h3>
+                    12:00
+                </h3>
+                <img src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png" alt="weather condition"/>
+                <div class="weather-forecast-temperature"> 17°
+                </div>
+                </div>
+            </div>
+        </div>
+        `;
+}
+
+function search(city) {
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4e4f8b4141fbe846dcc547332e27ba7f&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=4e4f8b4141fbe846dcc547332e27ba7f&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function handleSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-text-input");
-  console.log(searchInput.value);
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = searchInput.value;
-  let city = searchInput.value;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4e4f8b4141fbe846dcc547332e27ba7f&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
+  search(searchInput.value);
 }
+
+search("Albany");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+//function handleSubmit(event) {
+//// event.preventDefault();
+//let searchInput = document.querySelector("#search-text-input");
+//let h1 = document.querySelector("h1");
+//h1.innerHTML = searchInput.value;
+// let city = searchInput.value;
+
+// let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4e4f8b4141fbe846dcc547332e27ba7f&units=metric`;
+// axios.get(apiUrl).then(showTemperature);
+
+// apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=4e4f8b4141fbe846dcc547332e27ba7f&units=metric`;
+// axios.get(apiUrl).then(displayForecast);
+//}
+
+//function displayFahrenheitTemperature(event) {
+// event.preventDefault();
+// alert("Link clicked");
+//}
+
+//let fahrenheitLink = document.querySelector("fahrenheit-link");
+//fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);

@@ -24,7 +24,7 @@
     <div class="container">
       <div class="weather-container">
         
-         <div id="top-line">
+      
             <form class="align-left" id="search-form">
               <input
                 type="text"
@@ -37,12 +37,11 @@
             </form>
           
          
-            <p class="align-right">
-            °C    °F
-            </p>
-    </div>
+            <span class="align-right"><span class="units"> °C  | <a href="#" id="fahrenheit-link">°F</a></span></span>
+        
+ 
         <br/>
-        <br/>
+    <br/>
         <h6>
             Date will go here
         </h6>
@@ -51,7 +50,7 @@
         <br />
         <div class="row">
           <div class="col-12">
-            <h1 id="current-city">
+            <h1 id="city">
               Waterloo
             </h1>
           </div>
@@ -82,9 +81,24 @@
        
         <hr />
         <br />
+
+
+
         <p id="forecast">FORECAST:</p>
         <br />
-        <div class="row justify-content-md-center">
+
+        <div class="row weather-forecast" id="forecast">
+            <div class="col-2">
+                <h3>
+                    12:00
+                </h3>
+                <img src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png" alt="weather condition" />
+                <div class="weather-forecast-temperature"> 17°
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- <div class="row justify-content-md-center">
           <div class="col-2">
             <h5>
               🌦 17˚c
@@ -112,7 +126,7 @@
           </div>
         </div>
 
-        <div class="row justify-content-md-center">
+        <div class="row justify-content-md-center" id="forecast">
           <div class="col-2" id="date-names">
             MON
           </div>
@@ -128,11 +142,14 @@
           <div class="col-2" id="date-names">
             FRI
           </div>
-        </div>
-    </br>
-        
+        </div> -->
+
+    </br> 
       </div>
     </div>
+
+
+    
 </br>  
     <h4>
       <a href="https://github.com/victoriannv/my-weather-app">
