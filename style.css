@@ -1,32 +1,38 @@
 .weather-container {
   border: none;
   border-radius: 10px;
-  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 70%, #1c1c1c 150%),
-    linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.4) 0%,
-      rgba(0, 0, 0, 0.25) 200%
+  background-color: #c6c4c1;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    radial-gradient(
+      at 50% 0%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(0, 0, 0, 0.5) 50%
     );
-  background-blend-mode: multiply;
+  background-blend-mode: soft-light, screen;
+  background-blend-mode: screen;
   box-shadow: 6px 6px 35px -17px rgba(65, 65, 65, 0.4);
   display: block;
   margin: 5% auto 0px;
-  max-width: 550px;
-  padding: 3%;
+  max-width: 650px;
+  padding: 5%;
 }
 
 h6 {
   font-size: 8pt;
-  color: #e2e2e2;
+  color: #1c1c1c;
   text-align: right;
 }
 
 h1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 100;
-  font-size: 45pt;
+  font-size: 55pt;
   color: #ffffff;
-  text-align: center;
+  text-align: left;
 }
 
 p {
@@ -42,11 +48,12 @@ h2 {
   color: #ffffff;
   text-align: center;
   display: inline;
-  font-size: 24pt;
+  font-size: 36pt;
 }
 
 h3 {
-  line-height: 12pt;
+  line-height: 1.1;
+  font-size: 12pt;
 }
 
 h5 {
@@ -70,7 +77,8 @@ h6 {
   font-weight: 300;
   color: #ffffff;
   text-align: left;
-  margin-top: -10px;
+  margin-top: -5px;
+  letter-spacing: 2px;
 }
 
 #date-names {
@@ -84,6 +92,14 @@ hr {
   border-color: #ffffff;
 
   border-width: 0.25px;
+  opacity: 0.4;
+}
+
+.weather-forecast-temperature {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  text-align: center;
 }
 
 #humidity {
@@ -128,7 +144,7 @@ hr {
 }
 
 #clothing {
-  text-align: center;
+  text-align: left;
 }
 
 #bold {
@@ -139,7 +155,6 @@ hr {
   color: #e2e2e2;
   font-size: 8pt;
   font-weight: 900;
-  text-align: center;
 }
 
 #temp-indicator {
@@ -148,17 +163,19 @@ hr {
 }
 
 #humidity {
-  text-align: center;
-  display: block;
-  margin: 0 auto;
+  text-align: left;
   font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 9pt;
+  line-height: 80%;
 }
 
 #wind {
-  text-align: center;
-  display: block;
-  margin: 0 auto;
+  text-align: left;
   font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 9pt;
+  line-height: 80%;
 }
 
 .align-left {
@@ -172,4 +189,25 @@ hr {
   align-content: center;
   display: inline-block;
   margin: 0 auto;
+  margin-left: -10px;
+}
+
+#forecast-icons {
+  max-width: 75px;
+}
+
+#hours {
+  font-size: 12px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 100;
+  text-align: center;
+}
+
+#negative-line-height {
+  margin-top: -10px;
+}
+
+#temp-values {
+  margin-left: 20px;
+  margin-top: 8px;
 }
