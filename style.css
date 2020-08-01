@@ -1,19 +1,18 @@
 .weather-container {
   border: none;
   border-radius: 10px;
-  background-image: linear-gradient(to left, #bdbbbe 0%, #9d9ea3 100%),
-    radial-gradient(
-      88% 271%,
-      rgba(255, 255, 255, 0.25) 0%,
-      rgba(254, 254, 254, 0.25) 1%,
-      rgba(0, 0, 0, 0.25) 100%
+  background-color: #c2bcb2;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5) 10%,
+      rgba(0, 0, 0, 0.5) 100%
     ),
     radial-gradient(
-      50% 100%,
-      rgba(255, 255, 255, 0.3) 0%,
-      rgba(0, 0, 0, 0.3) 100%
+      at 50% 0%,
+      rgba(255, 255, 255, 0.1) 10%,
+      rgba(0, 0, 0, 0.5) 60%
     );
-  background-blend-mode: normal, lighten, soft-light;
+  background-blend-mode: soft-light, screen;
   box-shadow: 6px 6px 35px -17px rgba(65, 65, 65, 0.4);
   display: block;
   margin: 5% auto 0px;

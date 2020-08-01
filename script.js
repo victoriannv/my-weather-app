@@ -69,12 +69,13 @@ function showTemperature(response) {
   //What to Wear
 
   let whatToWear = document.querySelector("#what-to-wear");
-  if (temperature >= 10) {
+
+  if (temperature >= 20) {
+    whatToWear.innerHTML = "Prepare for heat! Wear something to keep you cool.";
+  } else if (temperature >= 10) {
     whatToWear.innerHTML = "Prepare for moderate weather today.";
   } else if (temperature < 10) {
     whatToWear.innerHTML = "Bundle up and wear a long sleeve.";
-  } else if (temperature >= 20) {
-    whatToWear.innerHTML = "Prepare for heat! Wear something to keep you cool.";
   } else if (response.data.main === "rain") {
     whatToWear.innerHTML = "Time for rain! Wear a rain jacket!";
   }
@@ -104,6 +105,15 @@ function showTemperature(response) {
 // FORMATHOURS
 
 function formatHours(timestamp) {
+  let time = new Date(timestamp);
+  let hours = time.getHours();
+  let minutes = time.getMinutes();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
   return `${hours}:${minutes}`;
 }
 
@@ -148,7 +158,7 @@ function handleSubmit(event) {
   search(searchInput.value);
 }
 
-search("Albany");
+search("New York");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
